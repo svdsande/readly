@@ -1,0 +1,58 @@
+.splash-screen-container {
+  background: linear-gradient(15deg, rgba(33,42,53,1) 0%, rgba(43,60,68,1) 50%, rgba(70,113,114,1) 100%);
+  animation: fade-out 0.5s ease-out 2.5s both;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  & .logo {
+    animation: scale-in-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.5s;
+    width: 500px;
+  }
+
+  & .title {
+    font-family: "Titan One", sans-serif;
+    margin: 0;
+    color: #FFFEE3;
+    font-size: 116px;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
