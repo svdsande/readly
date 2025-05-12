@@ -1,7 +1,7 @@
 .menu-container {
   display: flex;
   align-items: center;
-  background-color: #44fef2;
+  background-color: #003B46;
   height: 80px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -18,9 +18,21 @@
     align-items: center;
 
     .menu-item {
+      font-family: "Titan One", sans-serif;
       text-decoration: none;
-      color: #000;
-      margin-right: 12px;
+      color: #fff;
+      margin-right: 16px;
+      font-size: 20px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ccc;
+      }
+
+      &.active {
+        color: #FFA500;
+        font-weight: bold;
+      }
     }
 
     .menu-item:last-child {
