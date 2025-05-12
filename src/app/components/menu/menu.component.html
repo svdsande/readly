@@ -1,0 +1,13 @@
+<div class="menu-container">
+  <div class="menu">
+    <img src="images/readly-logo.png" alt="logo" class="logo" />
+    @for (item of menuItems; track $index) {
+      <a
+        class="menu-item"
+        [routerLink]="item.path"
+        [routerLinkActive]="['active']">
+          {{item.name}}
+      </a>
+    }
+  </div>
+</div>
