@@ -10,5 +10,10 @@ export const routes: Routes = [
   {
     path: 'library',
     component: LibraryComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
   }
 ];
