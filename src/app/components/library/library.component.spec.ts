@@ -1,23 +1,13 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LibraryComponent } from './library.component';
+import { createComponentFactory, Spectator } from '@ngneat/spectator';
 
 describe('LibraryComponent', () => {
-  let component: LibraryComponent;
-  let fixture: ComponentFixture<LibraryComponent>;
+  let spectator: Spectator<LibraryComponent>;
+  const createComponent = createComponentFactory(LibraryComponent);
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LibraryComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(LibraryComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  beforeEach(async () => spectator = createComponent());
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator.component).toBeTruthy();
   });
 });
