@@ -1,3 +1,8 @@
+:host {
+  position: sticky;
+  top: 0;
+}
+
 .menu-container {
   display: flex;
   align-items: center;
